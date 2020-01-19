@@ -7,9 +7,18 @@ namespace App;
 class ReadEnv
 {
 
-    public static function readEnv(): string
+    /**
+     * @var string
+     */
+    private $variable;
+
+    public function __construct(string $variable)
     {
-        return getenv('TEST_ENV_VAR');
+        $this->variable = $variable;
     }
 
+    public function readEnv(): string
+    {
+        return $this->variable;
+    }
 }

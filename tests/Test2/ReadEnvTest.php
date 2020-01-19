@@ -11,7 +11,9 @@ class ReadEnvTest extends WebTestCase
 {
     public function testGetEnv(): void
     {
-        $this->assertSame('Test2', ReadEnv::readEnv());
+        self::bootKernel();
+        $reader = self::$container->get(ReadEnv::class);
+        $this->assertSame('From phpunit.xml.dist - test2', $reader->readEnv());
     }
 
 }

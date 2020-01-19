@@ -8,7 +8,7 @@
          bootstrap="./../../config/bootstrap.php"
 >
     <php>
-        <env name="TEST_ENV_VAR" value="Test2"/>
+        <env name="TEST_ENV_VAR" value="From phpunit.xml.dist - test2"/>
         <ini name="error_reporting" value="-1" />
         <server name="APP_ENV" value="test" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
